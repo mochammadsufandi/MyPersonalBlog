@@ -11,6 +11,13 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        navbar: "#141c27",
+        headerNav: "#ffffff",
+        textAnimation: "#55e6a5",
+        textDescription: "#ffffff92",
+      },
+      fontFamily: {
+        primary: ["Poppins"],
       },
     },
   },
