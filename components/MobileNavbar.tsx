@@ -12,7 +12,7 @@ const MobileNavbar = (props: Props) => {
 
   return (
     <div
-      className={`fixed ${navAnimation} transform transition-all duration-300 top-0 left-0 right-0 bottom-0 z-[1000]`}
+      className={`fixed ${navAnimation} transform transition-all duration-300 top-0 -left-2 right-0 bottom-0 z-[1000]`}
     >
       <div className="w-[100vw] h-[100vh] flex flex-col items-center justify-center bg-navbar opacity-80">
         <div className="nav-link-mobile">HOME</div>

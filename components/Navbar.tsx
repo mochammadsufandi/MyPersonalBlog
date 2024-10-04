@@ -26,11 +26,15 @@ const Navbar = (props: Props) => {
         <div className="nav-link" onClick={() => routeLink("/")}>
           HOME
         </div>
-        <div className="nav-link">SERVICE</div>
+        <div className="nav-link" onClick={() => routeLink("/service")}>
+          SERVICE
+        </div>
         <div className="nav-link" onClick={() => routeLink("/about")}>
           About
         </div>
-        <div className="nav-link">Project</div>
+        <div className="nav-link" onClick={() => routeLink("/project")}>
+          Project
+        </div>
         <div className="nav-link">Blog</div>
         <div className="nav-link">Contact</div>
 
