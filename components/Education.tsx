@@ -1,26 +1,26 @@
 import React from "react";
 import CardExperience from "./CardAcademyExperience";
 
-const Experience = () => {
+const Education = () => {
   const field = [
     {
-      year: "2024",
-      institution: "VIX in Core Inisiative X Rakamin",
-      position: "Frontend",
+      year: "2023",
+      institution: "Institut Teknologi Sepuluh Nopember",
+      position: "Bachelor Degree Physics",
       description:
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. A consectetur eius placeat debitis blanditiis corporis ducimus? Minima non distinctio accusantium aliquam magnam saepe laudantium magni, fugiat, nulla tempore fuga sed!",
     },
     {
       year: "2024",
-      institution: "VIX Mandiri X Rakamin",
-      position: "Mobile App Developer",
+      institution: "Rakamin Academy",
+      position: "Fullstack Web Developer",
       description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. A consectetur eius placeat debitis blanditiis corporis ducimus? Minima non distinctio accusantium aliquam magnam saepe laudantium magni, fugiat, nulla tempore fuga sed! Lorem ipsum dolor sit, amet consectetur adipisicing elit. A consectetur eius placeat debitis blanditiis corporis ducimus? Minima non distinctio accusantium aliquam magnam saepe laudantium magni, fugiat, nulla tempore fuga sed!Lorem ipsum dolor sit, amet consectetur adipisicing elit. A consectetur eius placeat debitis blanditiis corporis ducimus? Minima non distinctio accusantium aliquam magnam saepe laudantium magni, fugiat, nulla tempore fuga sed!",
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. A consectetur eius placeat debitis blanditiis corporis ducimus? Minima non distinctio accusantium aliquam magnam saepe laudantium magni, fugiat, nulla tempore fuga sed!",
     },
     {
-      year: "2024",
-      institution: "Ganesha Operation",
-      position: "Physics Tutor",
+      year: "2023",
+      institution: "Dicoding Scolarship",
+      position: "Front End",
       description:
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. A consectetur eius placeat debitis blanditiis corporis ducimus? Minima non distinctio accusantium aliquam magnam saepe laudantium magni, fugiat, nulla tempore fuga sed!",
     },
@@ -28,7 +28,7 @@ const Experience = () => {
   return (
     <div className="bg-section">
       <h1 className="text-center text-headerNav text-[20px] sm:text-[25px] md:text-[35px] font-bold uppercase pt-[2rem]">
-        My Exp<span className="text-yellow-400">erience</span>
+        My Edu<span className="text-yellow-400">cation</span>
       </h1>
       <p className="text-headerNav text-[17px] text-center mt-[2rem]">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,
@@ -50,4 +50,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Education;

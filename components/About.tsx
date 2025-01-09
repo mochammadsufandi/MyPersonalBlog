@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   AcademicCapIcon,
   ArrowDownTrayIcon,
@@ -6,25 +6,37 @@ import {
 } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import TabButton from "./TabButton";
-import Academy from "./Academy";
+import Education from "./Education";
 import Experience from "./Experience";
 
 const About = () => {
   const [clickText, setClickText] = useState(false);
-  const [isCardOpenAcademy, setIsCardOpenAcademy] = useState(false);
+  const [isCardOpenEducation, setIsCardOpenEducation] = useState(false);
   const [isCardOpenExperience, setIsCardOpenExperience] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
   const onHover = (): void => {
     setClickText(true);
   };
   const closeHover = (): void => {
     setClickText(false);
   };
-  const onClickAcademy = (): void => {
-    setIsCardOpenAcademy((state) => !state);
+  const onClickEducation = (): void => {
+    setIsCardOpenEducation((state) => !state);
+    setIsCardOpenExperience(false);
   };
   const onClickExperience = (): void => {
     setIsCardOpenExperience((state) => !state);
+    setIsCardOpenEducation(false);
   };
+
+  useEffect(() => {
+    if (isCardOpenEducation || isCardOpenExperience) {
+      sectionRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  }, [isCardOpenEducation, isCardOpenExperience]);
 
   return (
     <>
@@ -60,10 +72,10 @@ const About = () => {
         </div>
         <div className="flex flex-wrap justify-center gap-6 mt-[3rem]">
           <TabButton
-            title="Academy"
+            title="Education"
             onHover={onHover}
             closeHover={closeHover}
-            onClick={onClickAcademy}
+            onClick={onClickEducation}
           >
             <AcademicCapIcon className="w-[2rem] h-[2rem]" />
           </TabButton>
@@ -80,8 +92,8 @@ const About = () => {
           </p>
         </div>
       </div>
-      {isCardOpenAcademy && <Academy />}
-      {isCardOpenExperience && <Experience />}
+      <div ref={sectionRef}>{isCardOpenEducation && <Education />}</div>
+      <div ref={sectionRef}>{isCardOpenExperience && <Experience />}</div>
     </>
   );
 };

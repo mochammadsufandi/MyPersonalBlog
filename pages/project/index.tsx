@@ -1,9 +1,9 @@
-import About from "@/components/About";
 import MobileNavbar from "@/components/MobileNavbar";
 import Navbar from "@/components/Navbar";
+import Project from "@/components/Project";
 import React, { useState } from "react";
 
-const AboutPage = () => {
+const ProjectPage = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const openNav = (): void => {
@@ -13,14 +13,13 @@ const AboutPage = () => {
   const closeNav = (): void => {
     setIsNavOpen(false);
   };
-
   return (
-    <div className="overflow-x-hidden">
+    <div className="bg-mainBG ">
       <Navbar openNav={openNav} />
-      <MobileNavbar closeNav={closeNav} isNavOpen={isNavOpen} />
-      <About />
+      <MobileNavbar isNavOpen={isNavOpen} closeNav={closeNav} />
+      <Project />
     </div>
   );
 };
 
-export default AboutPage;
+export default ProjectPage;
